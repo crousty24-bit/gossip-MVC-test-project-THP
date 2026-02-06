@@ -1,4 +1,4 @@
-require 'controller'
+require_relative 'controller'
 
 class Router
   def initialize #redige vers un controller; quand Router.new lancé par app.rb, crée automatique une instance @controller
