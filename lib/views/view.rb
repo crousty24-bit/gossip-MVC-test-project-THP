@@ -6,4 +6,10 @@ class View
     content = gets.chomp
     return params = {author: author, content: content} #return params = hash of author & content to Controller params & injected to Gossip.new()
   end
+
+  def index_gossips(gossips)
+    gossips.each do |gossip|
+      puts "#{gossip.author}: #{gossip.content}" 
+    end
+  end
 end
