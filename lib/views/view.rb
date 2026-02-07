@@ -12,4 +12,10 @@ class View
       puts "#{gossip.author}: #{gossip.content}" 
     end
   end
+
+  def delete_gossip
+    puts "Quel est le numéro du gossip que tu souhaite supprimer ?"
+    print ">"
+    return gets.chomp.to_i
+  end
 end

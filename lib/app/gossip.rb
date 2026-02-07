@@ -20,5 +20,15 @@ class Gossip
     end
     return all_gossips
   end
+
+  def self.delete(id)
+    csv_content = CSV.read("db/gossip.csv")
+    csv_content.delete_at(id -1)
+    CSV.open("db/gossip.csv", "w") do |csv|
+      csv_content.each do |row|
+        csv << row
+      end
+    end
+  end
 end
 #binding.pry
